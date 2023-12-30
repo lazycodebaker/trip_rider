@@ -12,7 +12,12 @@ import SEARCH_ICON from '../../../assets/search_icon.png'
 import { useRouter } from 'next/navigation'
 import { RED_COLOR } from '@/contants'
 
-const Topbar: React.FC = () => {
+import { FaBars, FaPlus } from 'react-icons/fa'
+
+import React from 'react'
+import { BarProps } from '@/app/CustomLayout'
+
+const Topbar: React.FC<BarProps> = ({isSidebarOpen,setIsSidebarOpen}) => {
     const router = useRouter()
 
     return (
@@ -34,13 +39,13 @@ const Topbar: React.FC = () => {
                         <div style={{
                             backgroundColor: RED_COLOR
                         }} className="absolute h-full px-4 flex items-center justify-center">
-                            <Image src={SEARCH_ICON} alt="Search Icon" className="" />
+                            <Image src={SEARCH_ICON} alt="Search Icon" className="w-5" />
                         </div>
                         <input type="text" placeholder="Search in Admin Panel" className="bg-white pl-14 placeholder:text-sm h-full outline outline-gray-400 text-black px-6 " />
                     </div>
                 </div>
 
-                <div className="flex items-center h-full">
+                <div className="lg:flex hidden items-center h-full">
                     {Options.map((option, index) => (
                         <div key={index} className='flex w-full h-full mx-4 items-center justify-center flex-col'>
                             <Image src={option.icon} alt={option.title} className={`${option.small ? 'md:w-8 w-7' : 'md:w-9 w-8'}`} />
@@ -48,6 +53,14 @@ const Topbar: React.FC = () => {
                         </div>
                     ))}
                 </div>
+
+
+                <div onClick={() => {
+                    setIsSidebarOpen(!isSidebarOpen)
+                }} className="lg:hidden flex cursor-pointer items-center justify-center w-12 h-12">
+                    {!isSidebarOpen ? <FaBars className="w-6 h-6 text-black" /> : <FaPlus className="w-6 h-6 text-black rotate-45" />}
+                </div>
+
             </div>
         </nav>
     )

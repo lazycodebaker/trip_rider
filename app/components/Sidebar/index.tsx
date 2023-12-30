@@ -21,12 +21,13 @@ import PROMO_CODE_ICON from '../../../assets/sidebaricons/promo_code.png'
 import LIVE_CHAT_ICON from '../../../assets/sidebaricons/live_chat.png'
 
 import { useRouter } from 'next/navigation'
+import { BarProps } from '@/app/CustomLayout'
 
 const Sidebar: React.FC = () => {
 
     const router = useRouter()
 
-    const navigate = (path : string) => {
+    const navigate = (path: string) => {
         router.push(path)
     }
 
@@ -36,7 +37,7 @@ const Sidebar: React.FC = () => {
 
             <ul>
                 {SidebarLinks.map((link, index) => (
-                    <li onClick={()=>navigate(link.path)} key={index} className='flex cursor-pointer items-center py-2 space-x-4'>
+                    <li onClick={() => navigate(link.path)} key={index} className='flex cursor-pointer items-center py-2 space-x-4'>
                         <Image src={link.icon} alt={link.title} className='w-6 h-6' />
                         <span className='text-white'>{link.title}</span>
                     </li>
