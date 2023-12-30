@@ -18,20 +18,20 @@ const Table: React.FC<TableProps> = ({for_data}) => {
     const rows = 50
 
     return (
-        <div className="w-full h-full mb-20 border-round-custom">
+        <div className="w-full h-full md:p-4 p-2 mb-20 border-round-custom">
            
             <div style={{
                 backgroundColor: RED_COLOR,
-            }} className="w-full md:h-20 h-28 text-white p-4 flex items-start md:items-center md:flex-row flex-col justify-between border-round-custom">
+            }} className="w-full md:h-20 h-28 text-white p-4 flex items-start md:items-center md:flex-row flex-col md:space-y-0 space-y-2 justify-between border-round-custom">
                 <h1 className="text-2xl">{for_data}</h1>
 
-                <div className="flex items-center h-full space-x-4">
-                    <button className="bg-red-800 py-2 md:px-4 px-2 rounded-lg font-normal md:font-semibold">Add User</button>
+                <div className="flex items-center h-full space-x-2">
+                    <button className="bg-red-800 py-2 md:px-4 px-2 rounded-lg text-sm font-normal md:font-semibold">Add User</button>
                     <div className="rounded-custom relative">
                         <div className="rounded-custom bg-red-800 absolute h-full px-4 flex items-center justify-center">
                             <Image src={SEARCH_ICON} alt="Search Icon" className="w-6" />
                         </div>
-                        <input type="text" placeholder="Search User" className="bg-white ml-10  px-6 py-2 rounded-full" />
+                        <input type="text" placeholder="Search User" className="bg-white ml-10 outline-none hover:outline-none focus:outline-none placeholder:text-sm text-black px-6 py-2 rounded-full" />
                     </div>
                 </div>
             </div>

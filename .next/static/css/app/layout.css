@@ -582,9 +582,16 @@ video {
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
+.m-2 {
+  margin: 0.5rem;
+}
 .mx-4 {
   margin-left: 1rem;
   margin-right: 1rem;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
 .mb-20 {
   margin-bottom: 5rem;
@@ -600,6 +607,15 @@ video {
 }
 .mt-3 {
   margin-top: 0.75rem;
+}
+.mt-1 {
+  margin-top: 0.25rem;
+}
+.mr-2 {
+  margin-right: 0.5rem;
+}
+.mr-4 {
+  margin-right: 1rem;
 }
 .inline-block {
   display: inline-block;
@@ -634,6 +650,15 @@ video {
 .h-screen {
   height: 100vh;
 }
+.h-0 {
+  height: 0px;
+}
+.h-96 {
+  height: 24rem;
+}
+.h-12 {
+  height: 3rem;
+}
 .w-16 {
   width: 4rem;
 }
@@ -658,6 +683,9 @@ video {
 .w-full {
   width: 100%;
 }
+.w-7 {
+  width: 1.75rem;
+}
 .cursor-pointer {
   cursor: pointer;
 }
@@ -675,6 +703,9 @@ video {
 }
 .justify-start {
   justify-content: flex-start;
+}
+.justify-end {
+  justify-content: flex-end;
 }
 .justify-center {
   justify-content: center;
@@ -711,6 +742,11 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+}
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 .overflow-x-scroll {
   overflow-x: scroll;
@@ -757,8 +793,26 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(22 163 74 / var(--tw-bg-opacity));
 }
+.bg-red-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 242 242 / var(--tw-bg-opacity));
+}
+.bg-red-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(127 29 29 / var(--tw-bg-opacity));
+}
+.bg-pink-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(236 72 153 / var(--tw-bg-opacity));
+}
+.to-black {
+  --tw-gradient-to: #000 var(--tw-gradient-to-position);
+}
 .p-4 {
   padding: 1rem;
+}
+.p-2 {
+  padding: 0.5rem;
 }
 .px-2 {
   padding-left: 0.5rem;
@@ -787,6 +841,22 @@ video {
 .px-16 {
   padding-left: 4rem;
   padding-right: 4rem;
+}
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+.pl-20 {
+  padding-left: 5rem;
+}
+.pl-16 {
+  padding-left: 4rem;
+}
+.pl-12 {
+  padding-left: 3rem;
+}
+.pl-14 {
+  padding-left: 3.5rem;
 }
 .text-left {
   text-align: left;
@@ -849,6 +919,16 @@ video {
 .opacity-75 {
   opacity: 0.75;
 }
+.outline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+.outline {
+  outline-style: solid;
+}
+.outline-gray-400 {
+  outline-color: #9ca3af;
+}
 
 * {
   margin: 0;
@@ -873,9 +953,29 @@ body {
   width: 2px;
 }
 
+.placeholder\:text-sm::-moz-placeholder {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.placeholder\:text-sm::placeholder {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .hover\:bg-gray-100:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
+.hover\:outline-none:hover {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.focus\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 
 @media (min-width: 640px) {
@@ -892,6 +992,14 @@ body {
     margin-right: 4rem;
   }
 
+  .md\:mt-3 {
+    margin-top: 0.75rem;
+  }
+
+  .md\:mt-2 {
+    margin-top: 0.5rem;
+  }
+
   .md\:flex {
     display: flex;
   }
@@ -904,6 +1012,14 @@ body {
     width: 60%;
   }
 
+  .md\:w-8 {
+    width: 2rem;
+  }
+
+  .md\:w-9 {
+    width: 2.25rem;
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -912,9 +1028,29 @@ body {
     align-items: center;
   }
 
+  .md\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0px * var(--tw-space-y-reverse));
+  }
+
+  .md\:p-4 {
+    padding: 1rem;
+  }
+
   .md\:px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .md\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 
   .md\:font-semibold {
