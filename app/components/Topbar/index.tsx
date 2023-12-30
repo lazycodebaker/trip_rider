@@ -28,8 +28,8 @@ const Topbar: React.FC<BarProps> = ({isSidebarOpen,setIsSidebarOpen}) => {
             }} className="flex items-center cursor-pointer space-x-2">
                 <Image src={USER_ICON} alt="User Icon" className='w-16' />
                 <div className="flex flex-col w-full -space-y-1">
-                    <h1 className="md:text-lg text-sm font-medium">Mr. Admin</h1>
-                    <p className="md:text-sm text-xs font-thin">lorem ipsum</p>
+                    <h1 className="md:text-lg text-base font-medium">Mr. Admin</h1>
+                    <p className="md:text-sm text-sm font-thin">lorem ipsum</p>
                 </div>
             </div>
 
