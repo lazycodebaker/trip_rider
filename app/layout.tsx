@@ -20,15 +20,15 @@ export type Children = {
 const Layout: React.FC<Children> = ({ children }) => {
   return (
     <section className="w-full h-screen">
-      <div className="grid lg:grid-cols-5 md:grid-cols-4 grid-cols-1 sm:grid-cols-3 h-full w-full">
+      <div className="flex h-full w-full">
 
         <div style={{
           backgroundColor: RED_COLOR
-        }} className="w-full h-full col-span-1 sm:block hidden">
+        }} className="lg:w-1/4 lg:block hidden h-full ">
           <Sidebar />
         </div>
 
-        <div className="w-full lg:col-span-4 md:col-span-3 col-span-2">
+        <div className="w-full ">
           <Topbar />
 
           <div className=" w-full h-screen p-4 bg-gray-100">

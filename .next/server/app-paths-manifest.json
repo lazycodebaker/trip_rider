@@ -1,6 +1,4 @@
 {
   "/page": "app/page.js",
-  "/drivers/page": "app/drivers/page.js",
-  "/vendors/page": "app/vendors/page.js",
-  "/riders/page": "app/riders/page.js"
+  "/drivers/page": "app/drivers/page.js"
 }

@@ -19,6 +19,7 @@ import SOS_UPDATE_ICON from '../../../assets/sidebaricons/sos_update.png'
 import UPDATE_BANNER_ICON from '../../../assets/sidebaricons/update_banner.png'
 import PROMO_CODE_ICON from '../../../assets/sidebaricons/promo_code.png'
 import LIVE_CHAT_ICON from '../../../assets/sidebaricons/live_chat.png'
+
 import { useRouter } from 'next/navigation'
 
 const Sidebar: React.FC = () => {
