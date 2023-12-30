@@ -28,7 +28,7 @@ const CustomLayout: React.FC<Children> = ({ children }) => {
                 <div style={{
                     backgroundColor: RED_COLOR
                 }} className={`lg:w-1/4 md:w-1/3 w-2/3 lg:relative absolute ${isSidebarOpen ? 'left-0' : '-left-full'} z-50 sm:px-2 px-4 top-0 h-full `}>
-                    <Sidebar />
+                    <Sidebar isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} />
                 </div>
 
                 <div className="w-full ">

@@ -23,12 +23,14 @@ import LIVE_CHAT_ICON from '../../../assets/sidebaricons/live_chat.png'
 import { useRouter } from 'next/navigation'
 import { BarProps } from '@/app/CustomLayout'
 
-const Sidebar: React.FC = () => {
+
+const Sidebar: React.FC<BarProps> = ({setIsSidebarOpen}) => {
 
     const router = useRouter()
 
     const navigate = (path: string) => {
         router.push(path)
+        setIsSidebarOpen(false)
     }
 
     return (
