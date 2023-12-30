@@ -19,7 +19,7 @@ export type BarProps = {
 
 const CustomLayout: React.FC<Children> = ({ children }) => {
 
-    const [isSidebarOpen, setIsSidebarOpen] = React.useState<boolean>(true)
+    const [isSidebarOpen, setIsSidebarOpen] = React.useState<boolean>(false)
 
     return (
         <section className="w-full h-screen">

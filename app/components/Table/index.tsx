@@ -26,7 +26,7 @@ const Table: React.FC<TableProps> = ({for_data}) => {
                 <h1 className="text-2xl">{for_data}</h1>
 
                 <div className="flex items-center h-full space-x-2">
-                    <button className="bg-red-800 py-2 md:px-4 px-2 rounded-lg text-sm font-normal md:font-semibold">Add User</button>
+                    <button className="bg-red-800 py-2 w-full px-2 rounded-lg text-sm font-normal md:font-semibold">Add User</button>
                     <div className="rounded-custom relative">
                         <div className="rounded-custom bg-red-800 absolute h-full px-4 flex items-center justify-center">
                             <Image src={SEARCH_ICON} alt="Search Icon" className="w-6" />
