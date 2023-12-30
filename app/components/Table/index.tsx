@@ -19,13 +19,14 @@ const Table: React.FC<TableProps> = ({for_data}) => {
 
     return (
         <div className="w-full h-full mb-20 border-round-custom">
+           
             <div style={{
                 backgroundColor: RED_COLOR,
-            }} className="w-full h-20 text-white p-4 flex items-center justify-between border-round-custom">
+            }} className="w-full md:h-20 h-28 text-white p-4 flex items-start md:items-center md:flex-row flex-col justify-between border-round-custom">
                 <h1 className="text-2xl">{for_data}</h1>
 
                 <div className="flex items-center h-full space-x-4">
-                    <button className="bg-red-800 px-6 py-2 rounded-lg font-semibold ">Add User</button>
+                    <button className="bg-red-800 py-2 md:px-4 px-2 rounded-lg font-normal md:font-semibold">Add User</button>
                     <div className="rounded-custom relative">
                         <div className="rounded-custom bg-red-800 absolute h-full px-4 flex items-center justify-center">
                             <Image src={SEARCH_ICON} alt="Search Icon" className="w-6" />
@@ -34,6 +35,7 @@ const Table: React.FC<TableProps> = ({for_data}) => {
                     </div>
                 </div>
             </div>
+
             <div className="w-full h-full bg-white overflow-y-scroll overflow-x-scroll" >
                 <table className="w-full">
                     <thead className="sticky top-0 w-full bg-gray-100 ">

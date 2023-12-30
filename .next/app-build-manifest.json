@@ -11,25 +11,16 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/drivers/page": [
+    "/auth/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/drivers/page.js"
+      "static/css/app/auth/layout.css",
+      "static/chunks/app/auth/layout.js"
     ],
-    "/vendors/page": [
+    "/auth/login/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/vendors/page.js"
-    ],
-    "/riders/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/riders/page.js"
-    ],
-    "/trips/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/trips/page.js"
+      "static/chunks/app/auth/login/page.js"
     ]
   }
 }

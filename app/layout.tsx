@@ -28,10 +28,10 @@ const Layout: React.FC<Children> = ({ children }) => {
           <Sidebar />
         </div>
 
-        <div className="w-full ">
+        <div className="w-full">
           <Topbar />
 
-          <div className=" w-full h-screen p-4 bg-gray-100">
+          <div className="w-full h-screen">
             {children}
           </div>
         </div>
