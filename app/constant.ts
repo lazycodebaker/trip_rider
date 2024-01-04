@@ -1,0 +1,1 @@
+export const API_URL = 'https://rajiv-cab-node5flyweis.vercel.app/api/v1/admin'
