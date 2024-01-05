@@ -26,6 +26,11 @@ wallet: 0
 
 type IUser = {}
 
+// using typescript + zod would be much beneficial here 
+// we can use the types of the data as table column for proper use 
+
+// i have created a component named table which will render data according to props passed 
+
 export default function Home() {
   const [riders, setRiders] = useState<any>([])
 
