@@ -22,15 +22,30 @@ import LIVE_CHAT_ICON from '../../../assets/sidebaricons/live_chat.png'
 
 import { useRouter } from 'next/navigation'
 import { BarProps } from '@/app/CustomLayout'
+import { useEffect, useState } from 'react'
 
 
-const Sidebar: React.FC<BarProps> = ({setIsSidebarOpen}) => {
+const Sidebar: React.FC<BarProps> = ({ setIsSidebarOpen }) => {
 
     const router = useRouter()
 
+    const [isMobile, setIsMobile] = useState(false);
+
+    const handleResize = () => {
+        const isMobile = window.innerWidth <= 1024
+        setIsMobile(isMobile)
+    };
+
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     const navigate = (path: string) => {
         router.push(path)
-        setIsSidebarOpen(false)
+        isMobile && setIsSidebarOpen(false)
     }
 
     return (

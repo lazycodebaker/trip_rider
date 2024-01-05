@@ -953,14 +953,6 @@ body {
 
 @media (min-width: 768px) {
 
-  .md\:relative {
-    position: relative;
-  }
-
-  .md\:left-0 {
-    left: 0px;
-  }
-
   .md\:mx-16 {
     margin-left: 4rem;
     margin-right: 4rem;

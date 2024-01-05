@@ -7,20 +7,19 @@ import SEARCH_ICON from '../../../assets/search_icon.png'
 
 import Image from 'next/image'
 import { RED_COLOR } from '@/contants'
-import React, { use, useEffect } from 'react'
-import { TVendor } from '@/app/drivers/page'
+import React, {  useEffect } from 'react'
+import { TDriver } from '@/app/drivers/page'
 
 type TableProps = {
     for_data: string,
-    data: TVendor[],
-    setData?: React.Dispatch<React.SetStateAction<TVendor[]>>
+    data: TDriver[]
 }
 
 const Table: React.FC<TableProps> = ({ for_data, data }) => {
 
     const [searchFilter, setSearchFilter] = React.useState<string>("")
-    const [filteredData, setFilteredData] = React.useState<TVendor[]>([])
-
+    const [filteredData, setFilteredData] = React.useState<TDriver[]>([])
+    
     useEffect(() => {
         // Function to filter data based on the searchFilter
         const filterData = () => {

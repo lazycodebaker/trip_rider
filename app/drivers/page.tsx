@@ -5,7 +5,7 @@ import Table from "../components/Table"
 import { useEffect, useState } from "react"
 import { API_URL } from "../constant"
 
-export type TVendor = {
+export type TDriver = {
     __v: number
     _id: string
     address: string
@@ -26,7 +26,7 @@ export type TVendor = {
 
 // get the serverprops data here as proops and pass to Table component
 const AllDrivers: React.FC = () => {
-    const [vendors, setVendors] = useState<TVendor[]>([])
+    const [drivers, setDrivers] = useState<TDriver[]>([])
 
     const url = `${API_URL}/all/driver`
 
@@ -35,9 +35,9 @@ const AllDrivers: React.FC = () => {
             const data = res.data
 
             if(data.success === true) {
-                setVendors(data.vendors)
+                setDrivers(data.vendors)
             } else {
-                setVendors([])
+                setDrivers([])
             }
         }
         ).catch((err) => {
@@ -46,7 +46,7 @@ const AllDrivers: React.FC = () => {
     }, [])
 
     return (
-        <Table for_data={"All Driver"} data={vendors} setData={setVendors} />
+        <Table key={"drivers"} for_data={"All Driver"} data={drivers} />
     )
 }
 
