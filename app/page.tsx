@@ -1,7 +1,7 @@
 
 'use client'
 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Table from "./components/Table";
 import { API_URL } from "./constant";
 import axios from "axios";
@@ -31,7 +31,10 @@ type IUser = {}
 
 // i have created a component named table which will render data according to props passed 
 
-export default function Home() {
+// i was sort of time else have made it more better 
+
+
+const Home: React.FC = () => {
   const [riders, setRiders] = useState<any>([])
 
   const url = `${API_URL}/all/user`
@@ -55,3 +58,5 @@ export default function Home() {
     <Table key={"riders"} data={riders} for_data={"All Riders"} />
   )
 }
+
+export default Home

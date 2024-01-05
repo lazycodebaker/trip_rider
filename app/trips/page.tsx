@@ -3,7 +3,7 @@ import Table from "../components/Table"
 
 const AllTrips: React.FC = () => {
     return (
-        <Table for_data={"All Trips"} />
+        <Table data={[]} key={"trips"} for_data={"All Trips"} />
     )
 }
 
